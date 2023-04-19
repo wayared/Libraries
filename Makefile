@@ -15,3 +15,6 @@ dlib: calc.c
 
 dynamic: $(DLIB) add.c sub.c 
 	gcc -shared -fPIC -o lib_calc.so add.c sub.c
+
+clean: 
+	rm -r *.o 
