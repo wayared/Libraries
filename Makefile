@@ -10,5 +10,8 @@ slib: add.c sub.c
 	gcc -c sub.c -o lib_sub.o
 	ar rcs lib_calc.a lib_add.o lib_sub.o
 
-dynamic: add.c sub.c 
+dlib: calc.c
+	gcc -o calc calc.c ./lib_calc.so
+
+dynamic: $(DLIB) add.c sub.c 
 	gcc -shared -fPIC -o lib_calc.so add.c sub.c
