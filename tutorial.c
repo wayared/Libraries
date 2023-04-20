@@ -8,3 +8,5 @@
 // 
 //
 // How to use Dynamic Libraries in C
+// to create dynamic librarie (gcc -shared -fPIC -o lib_calc.so add.c sub.c)
+// to use dynamic librarie (gcc -o calc calc.c ./lib_calc.so)
